@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/ui/header";
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.dev",
+  title: "Local Friend",
+  description: "Local Friend",
+  generator: "Local Friend",
 };
 
 export default function RootLayout({
