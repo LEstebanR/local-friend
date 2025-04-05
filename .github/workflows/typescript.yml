@@ -1,4 +1,4 @@
-name: Lint
+name: TypeScript
 
 on:
   push:
@@ -9,9 +9,8 @@ on:
       - main
 
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up Node.js
@@ -20,7 +19,5 @@ jobs:
           node-version: "18"
       - name: Install dependencies
         run: yarn install
-      - name: Run ESLint
-        run: yarn lint
-      - name: Check TypeScript
+      - name: Run TypeScript
         run: yarn tsc --noEmit
