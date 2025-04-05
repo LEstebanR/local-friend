@@ -1,12 +1,12 @@
-import Link from "next/link"
-import { Check, MapPin } from "lucide-react"
+import Link from "next/link";
+import { Check, MapPin } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function BecomeGuidePage() {
   return (
@@ -14,16 +14,21 @@ export default function BecomeGuidePage() {
       <div className="relative bg-teal-500 text-white">
         <div className="container py-16 relative z-10">
           <div className="max-w-2xl">
-            <h1 className="text-4xl font-bold mb-4">Comparte Tu Ciudad con Viajeros</h1>
+            <h1 className="text-4xl font-bold mb-4">
+              Comparte Tu Ciudad con Viajeros
+            </h1>
             <p className="text-xl mb-6">
-              Conviértete en un guía LocalFriend y gana dinero mientras muestras a los visitantes lo que hace especial a
-              tu ciudad.
+              Conviértete en un guía LocalFriend y gana dinero mientras muestras
+              a los visitantes lo que hace especial a tu ciudad.
             </p>
             <div className="flex gap-4">
               <Button variant="secondary" asChild>
                 <a href="#apply">Aplica Ahora</a>
               </Button>
-              <Button variant="outline" className="bg-transparent text-white hover:bg-white/20 hover:text-white">
+              <Button
+                variant="outline"
+                className="bg-transparent text-white hover:bg-white/20 hover:text-white"
+              >
                 Aprende Más
               </Button>
             </div>
@@ -47,8 +52,8 @@ export default function BecomeGuidePage() {
               </div>
               <h3 className="text-xl font-medium mb-2">Comparte Tu Pasión</h3>
               <p className="text-muted-foreground">
-                Ya sea comida, historia, arte o actividades al aire libre, comparte lo que amas de tu ciudad con los
-                visitantes.
+                Ya sea comida, historia, arte o actividades al aire libre,
+                comparte lo que amas de tu ciudad con los visitantes.
               </p>
             </CardContent>
           </Card>
@@ -59,7 +64,8 @@ export default function BecomeGuidePage() {
               </div>
               <h3 className="text-xl font-medium mb-2">Horario Flexible</h3>
               <p className="text-muted-foreground">
-                Tú decides cuándo estás disponible. Crea experiencias que se adapten a tu estilo de vida y horario.
+                Tú decides cuándo estás disponible. Crea experiencias que se
+                adapten a tu estilo de vida y horario.
               </p>
             </CardContent>
           </Card>
@@ -70,8 +76,8 @@ export default function BecomeGuidePage() {
               </div>
               <h3 className="text-xl font-medium mb-2">Gana Ingresos Extra</h3>
               <p className="text-muted-foreground">
-                Establece tus propios precios y gana dinero haciendo lo que amas. La mayoría de los guías ganan $200-500
-                por semana.
+                Establece tus propios precios y gana dinero haciendo lo que
+                amas. La mayoría de los guías ganan $200-500 por semana.
               </p>
             </CardContent>
           </Card>
@@ -93,9 +99,12 @@ export default function BecomeGuidePage() {
                   <span className="font-medium text-teal-500">1</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-1">Solicita ser guía</h3>
+                  <h3 className="text-xl font-medium mb-1">
+                    Solicita ser guía
+                  </h3>
                   <p className="text-muted-foreground">
-                    Completa nuestro formulario de solicitud con información sobre ti y tu ciudad.
+                    Completa nuestro formulario de solicitud con información
+                    sobre ti y tu ciudad.
                   </p>
                 </div>
               </div>
@@ -104,9 +113,12 @@ export default function BecomeGuidePage() {
                   <span className="font-medium text-teal-500">2</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-1">Crea tus experiencias</h3>
+                  <h3 className="text-xl font-medium mb-1">
+                    Crea tus experiencias
+                  </h3>
                   <p className="text-muted-foreground">
-                    Diseña experiencias únicas que muestren lo que hace especial a tu ciudad.
+                    Diseña experiencias únicas que muestren lo que hace especial
+                    a tu ciudad.
                   </p>
                 </div>
               </div>
@@ -115,9 +127,12 @@ export default function BecomeGuidePage() {
                   <span className="font-medium text-teal-500">3</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-1">Conecta con viajeros</h3>
+                  <h3 className="text-xl font-medium mb-1">
+                    Conecta con viajeros
+                  </h3>
                   <p className="text-muted-foreground">
-                    Recibe solicitudes de reserva, comunícate con los huéspedes y proporciona experiencias inolvidables.
+                    Recibe solicitudes de reserva, comunícate con los huéspedes
+                    y proporciona experiencias inolvidables.
                   </p>
                 </div>
               </div>
@@ -128,7 +143,8 @@ export default function BecomeGuidePage() {
                 <div>
                   <h3 className="text-xl font-medium mb-1">Recibe pagos</h3>
                   <p className="text-muted-foreground">
-                    Recibe pagos seguros directamente en tu cuenta bancaria después de cada experiencia.
+                    Recibe pagos seguros directamente en tu cuenta bancaria
+                    después de cada experiencia.
                   </p>
                 </div>
               </div>
@@ -137,7 +153,9 @@ export default function BecomeGuidePage() {
         </div>
 
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Lo Que Dicen Nuestros Guías</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Lo Que Dicen Nuestros Guías
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -178,7 +196,9 @@ export default function BecomeGuidePage() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-muted-foreground italic">"{testimonial.quote}"</p>
+                  <p className="text-muted-foreground italic">
+                    &quot;{testimonial.quote}&quot;
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -186,7 +206,9 @@ export default function BecomeGuidePage() {
         </div>
 
         <div id="apply" className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Solicita Convertirte en Guía</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Solicita Convertirte en Guía
+          </h2>
 
           <Tabs defaultValue="personal">
             <TabsList className="grid w-full grid-cols-3">
@@ -203,7 +225,11 @@ export default function BecomeGuidePage() {
 
               <div className="grid gap-2">
                 <Label htmlFor="email">Correo Electrónico</Label>
-                <Input id="email" type="email" placeholder="tu.correo@ejemplo.com" />
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="tu.correo@ejemplo.com"
+                />
               </div>
 
               <div className="grid gap-2">
@@ -252,7 +278,10 @@ export default function BecomeGuidePage() {
 
               <div className="grid gap-2">
                 <Label htmlFor="interests">Tus Intereses</Label>
-                <Input id="interests" placeholder="Comida, Historia, Arte, Aire Libre, etc." />
+                <Input
+                  id="interests"
+                  placeholder="Comida, Historia, Arte, Aire Libre, etc."
+                />
               </div>
 
               <div className="grid gap-2">
@@ -284,8 +313,8 @@ export default function BecomeGuidePage() {
                 <Label htmlFor="id">Verificación de Identidad</Label>
                 <div className="border rounded-md p-4">
                   <p className="text-sm text-muted-foreground mb-4">
-                    Para garantizar la seguridad de todos los usuarios, requerimos verificación de identidad para todos
-                    los guías.
+                    Para garantizar la seguridad de todos los usuarios,
+                    requerimos verificación de identidad para todos los guías.
                   </p>
                   <Button variant="outline" size="sm">
                     Subir Documento de Identidad
@@ -294,14 +323,27 @@ export default function BecomeGuidePage() {
               </div>
 
               <div className="flex items-center space-x-2 mt-4">
-                <input type="checkbox" id="terms" className="rounded border-gray-300" />
-                <label htmlFor="terms" className="text-sm text-muted-foreground">
+                <input
+                  type="checkbox"
+                  id="terms"
+                  className="rounded border-gray-300"
+                />
+                <label
+                  htmlFor="terms"
+                  className="text-sm text-muted-foreground"
+                >
                   Acepto los{" "}
-                  <Link href="/terms" className="text-teal-500 hover:text-teal-600">
+                  <Link
+                    href="/terms"
+                    className="text-teal-500 hover:text-teal-600"
+                  >
                     Términos de Servicio para Guías
                   </Link>{" "}
                   y la{" "}
-                  <Link href="/privacy" className="text-teal-500 hover:text-teal-600">
+                  <Link
+                    href="/privacy"
+                    className="text-teal-500 hover:text-teal-600"
+                  >
                     Política de Privacidad
                   </Link>
                 </label>
@@ -310,7 +352,8 @@ export default function BecomeGuidePage() {
               <Button className="w-full">Enviar Solicitud</Button>
 
               <p className="text-sm text-muted-foreground text-center mt-4">
-                Nuestro equipo revisará tu solicitud y te responderá dentro de 3-5 días hábiles.
+                Nuestro equipo revisará tu solicitud y te responderá dentro de
+                3-5 días hábiles.
               </p>
             </TabsContent>
           </Tabs>
@@ -320,10 +363,12 @@ export default function BecomeGuidePage() {
       <div className="bg-muted/50 py-16">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">¿Listo para Compartir Tu Ciudad?</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              ¿Listo para Compartir Tu Ciudad?
+            </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Únete a nuestra comunidad de guías locales apasionados y comienza a crear experiencias memorables para los
-              viajeros.
+              Únete a nuestra comunidad de guías locales apasionados y comienza
+              a crear experiencias memorables para los viajeros.
             </p>
             <Button size="lg" asChild>
               <a href="#apply">Aplicar Ahora</a>
@@ -332,6 +377,5 @@ export default function BecomeGuidePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

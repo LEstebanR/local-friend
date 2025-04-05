@@ -1,12 +1,5 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  Mail,
-  MessageSquare,
-  Phone,
-  Search,
-  Users,
-} from "lucide-react";
+import { ArrowRight, Mail, MessageSquare, Phone, Search } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -244,8 +237,8 @@ export default function HelpPage() {
                         antes de reservar.
                       </li>
                       <li>
-                        Una vez decidido, haz clic en "Reservar" y completa el
-                        proceso de pago.
+                        Una vez decidido, haz clic en &quot;Reservar&quot; y
+                        completa el proceso de pago.
                       </li>
                       <li>
                         Recibirás una confirmación por email con todos los
@@ -366,7 +359,9 @@ export default function HelpPage() {
                     <p className="mt-2">Te recomendamos revisar:</p>
                     <ul className="list-disc pl-5 space-y-1">
                       <li>Las reseñas de otros viajeros</li>
-                      <li>La insignia de "Verificado" en su perfil</li>
+                      <li>
+                        La insignia de &quot;Verificado&quot; en su perfil
+                      </li>
                       <li>Su historial y experiencia como guía</li>
                       <li>
                         Sus respuestas a mensajes (tiempo de respuesta,
@@ -398,7 +393,7 @@ export default function HelpPage() {
                     <ol className="list-decimal pl-5 space-y-2">
                       <li>
                         Completa el formulario de solicitud en la sección
-                        "Conviértete en Guía"
+                        &quot;Conviértete en Guía&quot;
                       </li>
                       <li>
                         Proporciona información sobre ti, tu ciudad y las
@@ -671,8 +666,9 @@ export default function HelpPage() {
                       </li>
                     </ul>
                     <p className="mt-2">
-                      Para solicitar un reembolso, ve a "Mis Reservas" en tu
-                      cuenta y selecciona la opción "Solicitar Reembolso".
+                      Para solicitar un reembolso, ve a &quot;Mis Reservas&quot;
+                      en tu cuenta y selecciona la opción &quot;Solicitar
+                      Reembolso&quot;.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -710,8 +706,8 @@ export default function HelpPage() {
                     </p>
                     <p className="mt-2">
                       Los guías pueden ver un desglose detallado de sus
-                      ganancias, comisiones y pagos en la sección "Mis Finanzas"
-                      de su cuenta.
+                      ganancias, comisiones y pagos en la sección &quot;Mis
+                      Finanzas&quot; de su cuenta.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
