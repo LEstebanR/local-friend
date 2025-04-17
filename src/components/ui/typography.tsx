@@ -1,3 +1,13 @@
+import clsx from "clsx"
+import ReactNode from "react"
+
+type TypographyType = {
+    children: ReactNode
+    color?: string
+    className?: string
+    size?: string
+}
+
 export const H1 = ({
   children,
   color = 'black',
@@ -5,11 +15,19 @@ export const H1 = ({
   children: React.ReactNode
   color?: string
 }) => {
-  return <h1 className={`text-2xl font-bold text-${color}`}>{children}</h1>
+  return <h1 className={clsx("text-2xl font-bold", `text-${color}`)}>{children}</h1>
 }
 
-export const H2 = ({ children }: { children: React.ReactNode }) => {
-  return <h2 className="text-xl font-bold">{children}</h2>
+export const H2 = ({ children, className, color = "black", size="text-xl" }: TypographyType) => {
+  return (
+    <h2 className={clsx(
+      "font-bold",
+      `text-${color} text-${size}`,
+      className
+    )}>
+      {children}
+    </h2>
+  )
 }
 
 export const H3 = ({ children }: { children: React.ReactNode }) => {
@@ -23,12 +41,10 @@ export const Subtitle = ({ children }: { children: React.ReactNode }) => {
 export const Body = ({
   children,
   color = 'black',
-}: {
-  children: React.ReactNode
-  color?: string
-}) => {
+  size = "text-base"     
+}: TypographyType) => {
   return (
-    <p className={`text-base ${color === 'black' ? 'text-black' : color}`}>
+    <p className={clsx("text-base", `text-${color} text-${size}`)}>
       {children}
     </p>
   )

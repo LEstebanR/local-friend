@@ -1,17 +1,12 @@
 import { CustomLink } from '@components/ui/link'
 import { Logo } from '@components/ui/logo'
-import { Button } from './button'
 import { DropDown } from '@components/ui/dropdown'
 import { Menu } from 'lucide-react'
 
 const HEADER_LINKS = [
   {
-    label: 'About',
-    href: '/about',
-  },
-  {
-    label: 'Home',
-    href: '/',
+    label: 'Lista de espera',
+    href: '/#waitlist',
   },
 ]
 
@@ -32,21 +27,14 @@ const Header = () => {
             </CustomLink>
           ))}
         </div>
-        <div className="flex items-center gap-2">
-          <Button variant="outline" type="link" href="/login">
-            LogIn
-          </Button>
-          <Button type="link" href="/signup">
-            SignUp
-          </Button>
-          <DropDown
+        <DropDown
             className="md:hidden"
             options={HEADER_LINKS}
             type="icon"
             icon={<Menu />}
             action={() => {}}
-          />
-        </div>
+        />
+
       </div>
     </header>
   )

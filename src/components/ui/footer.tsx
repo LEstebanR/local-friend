@@ -4,12 +4,8 @@ import { CustomLink } from '@components/ui/link'
 
 const LINKS = [
   {
-    label: 'About',
-    href: '/about',
-  },
-  {
-    label: 'home',
-    href: '/',
+    label: 'Lista de espera',
+    href: '/#waitlist',
   },
 ]
 

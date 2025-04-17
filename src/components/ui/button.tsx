@@ -15,12 +15,12 @@ interface ButtonProps {
 }
 
 const defaultClasses =
-  'p-1 rounded-md border-1 text-sm hover:opacity-80 hover:shadow-lg transition-all duration-300 cursor-pointer'
+  'p-1 h-12 rounded-md border-1 text-sm hover:opacity-80 hover:shadow-lg transition-all duration-300 cursor-pointer'
 
 const sizeClasses = {
   sm: 'w-12',
   md: 'w-18',
-  lg: 'w-24',
+  lg: 'w-48',
 }
 
 export function Button({

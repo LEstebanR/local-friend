@@ -1,12 +1,16 @@
-import { TreePalm } from 'lucide-react'
+import { Users } from 'lucide-react'
 import { CustomLink } from './link'
+import { H1} from "@components/ui/typography"
 
 export function Logo() {
   return (
     <CustomLink href="/">
-      <div className="flex cursor-pointer items-center gap-1 outline-2 outline-offset-4 outline-dotted">
-        <TreePalm className="text-primary" data-testid="tree-palm-icon" />
-        <p className="text-primary">Indie Project</p>
+      <div className="flex cursor-pointer items-center gap-1">
+        <div className="rounded-full flex items-center justify-center p-1 bg-primary">
+            <Users className="text-white"/>
+        </div>
+        <H1 color="primary">Local</H1>
+        <H1>Friend</H1>
       </div>
     </CustomLink>
   )
