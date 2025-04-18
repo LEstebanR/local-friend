@@ -5,8 +5,8 @@ type TypographyType = {
     children: ReactNode
     color?: string
     className?: string
-    size?: string
 }
+
 
 export const H1 = ({
   children,
@@ -18,16 +18,26 @@ export const H1 = ({
   return <h1 className={clsx("text-2xl font-bold", `text-${color}`)}>{children}</h1>
 }
 
-export const H2 = ({ children, className, color = "black", size="text-xl" }: TypographyType) => {
+export const H2 = ({ children, className, color = "black" }: TypographyType) => {
   return (
     <h2 className={clsx(
-      "font-bold",
-      `text-${color} text-${size}`,
+      "font-bold text-xl",
+      `text-${color}`,
       className
     )}>
       {children}
     </h2>
   )
+}
+
+export const H2Hero = ({ children, className, color}) => {
+    return (
+        <h2 className={clsx(
+            "font-bold text-3xl md:text-4xl",
+            `text-${color}`,
+            className
+        )}>{children}</h2>
+    )
 }
 
 export const H3 = ({ children }: { children: React.ReactNode }) => {
