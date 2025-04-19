@@ -1,3 +1,3 @@
-export function JoinList(){
-    return <p id="#waitlist">Join list</p>
+export function JoinList() {
+  return <p id="#waitlist">Join list</p>
 }

@@ -10,4 +10,4 @@ describe('Math functions', () => {
     expect(sum(-1, 1)).toBe(0)
     expect(sum(0, 0)).toBe(0)
   })
-}) 
+})

@@ -1,3 +1,3 @@
-export function HowWorks(){
-    return <p>How works</p>
+export function HowWorks() {
+  return <p>How works</p>
 }

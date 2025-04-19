@@ -30,7 +30,7 @@ export function DropDown({
     <Popover className={clsx('relative', className)}>
       {({ close }) => (
         <>
-          <PopoverButton className="flex h-10 min-w-[40px] items-center gap-2 rounded-md px-4 py-2 text-sm font-medium text-gray-700 focus:outline-none text-primary">
+          <PopoverButton className="text-primary flex h-10 min-w-[40px] items-center gap-2 rounded-md px-4 py-2 text-sm font-medium text-gray-700 focus:outline-none">
             {type === 'icon' ? icon : label}
           </PopoverButton>
           <Transition

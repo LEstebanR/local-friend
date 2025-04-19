@@ -28,13 +28,12 @@ const Header = () => {
           ))}
         </div>
         <DropDown
-            className="md:hidden"
-            options={HEADER_LINKS}
-            type="icon"
-            icon={<Menu />}
-            action={() => {}}
+          className="md:hidden"
+          options={HEADER_LINKS}
+          type="icon"
+          icon={<Menu />}
+          action={() => {}}
         />
-
       </div>
     </header>
   )
