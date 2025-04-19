@@ -45,22 +45,24 @@ function StepData({
 
 export function HowWorks() {
   return (
-    <div className="mb-8 flex w-5/6 flex-col gap-4 text-center md:w-4/6">
-      <H2>Cómo funcionará</H2>
-      <Body className="text-muted">
-        Estamos desarrollando una plataforma intuitiva que hará que conectar con
-        locales sea tan fácil como reservar un hotel.
-      </Body>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        {STEPS_DATA.map((step, index) => {
-          return (
-            <StepData
-              title={step.title}
-              description={step.description}
-              step={index + 1}
-            />
-          )
-        })}
+    <div className="md:pv-12 flex w-5/6 w-full flex-col items-center bg-slate-50 px-4 py-8 text-center">
+      <div className="flex flex-col gap-4 md:w-4/6 md:gap-12">
+        <H2>Cómo funcionará</H2>
+        <Body className="text-muted">
+          Estamos desarrollando una plataforma intuitiva que hará que conectar
+          con locales sea tan fácil como reservar un hotel.
+        </Body>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          {STEPS_DATA.map((step, index) => {
+            return (
+              <StepData
+                title={step.title}
+                description={step.description}
+                step={index + 1}
+              />
+            )
+          })}
+        </div>
       </div>
     </div>
   )

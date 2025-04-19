@@ -9,7 +9,7 @@ type AboutCardType = {
 
 export function AboutCard({ title, icon, description }: AboutCardType) {
   return (
-    <div className="border-muted flex flex-col gap-4 rounded-md border p-4">
+    <div className="border-muted flex flex-col gap-4 rounded-md border p-4 text-left">
       <div className="bg-primary-bg flex h-12 w-12 items-center justify-center rounded-full p-1">
         {icon}
       </div>
