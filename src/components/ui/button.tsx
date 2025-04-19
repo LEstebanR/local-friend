@@ -52,6 +52,7 @@ export function Button({
     },
     black: {
       solid: 'bg-black text-white',
+      outline: '',
     },
   }
 
