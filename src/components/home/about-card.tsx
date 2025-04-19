@@ -1,13 +1,13 @@
 import { ReactNode } from 'react'
 import { Body, H3 } from '@components/ui/typography'
 
-type AboutCartType = {
+type AboutCardType = {
   title: string
   icon?: ReactNode
   description: string
 }
 
-export function AboutCard({ title, icon, description }) {
+export function AboutCard({ title, icon, description }: AboutCardType) {
   return (
     <div className="border-muted flex flex-col gap-4 rounded-md border p-4">
       <div className="bg-primary-bg flex h-12 w-12 items-center justify-center rounded-full p-1">
