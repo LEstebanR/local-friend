@@ -5,7 +5,7 @@ import { CustomLink } from '@components/ui/link'
 interface ButtonProps {
   children?: React.ReactNode
   variant?: 'solid' | 'outline'
-  color?: 'primary' | 'secondary'
+  color?: 'primary' | 'secondary' | 'black'
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'full'
   className?: string
   type?: 'link' | 'icon'

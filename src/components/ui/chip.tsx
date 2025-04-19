@@ -4,7 +4,7 @@ import clsx from 'clsx'
 type ChipProps = {
   children: ReactNode
   className?: string
-  color: string
+  color?: string
 }
 
 export function Chip({ children, className, color = 'primary' }: ChipProps) {
