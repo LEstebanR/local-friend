@@ -1,7 +1,7 @@
 import { Chip } from '@components/ui/chip'
 import { MessageSquare, Calendar, Star, Globe } from 'lucide-react'
 import { Body, H2, H3 } from '@components/ui/typography'
-import { ReeactNode } from 'react'
+import { ReactNode } from 'react'
 import { WaitListForm } from '@components/forms/wait-list-form'
 
 const ITEMS_INFO = [
@@ -31,7 +31,7 @@ function ItemData({
 }: {
   icon: ReeactNode
   title: string
-  description: title
+  description: string
 }) {
   return (
     <div className="flex gap-2">
