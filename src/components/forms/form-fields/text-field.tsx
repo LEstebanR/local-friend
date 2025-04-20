@@ -4,7 +4,7 @@ type TextFieldType = {
   className: string
 }
 
-export function TextField({ label, placeholder, className }) {
+export function TextField({ label, placeholder, className }: TextFieldType) {
   return (
     <div className="w-full">
       <label className="mb-1 block text-sm font-medium text-gray-700">

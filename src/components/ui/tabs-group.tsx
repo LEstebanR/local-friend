@@ -35,7 +35,7 @@ export function TabsGroup({ options }: TabsGroupProps) {
               )
             }
           >
-            {option.label}
+            {selectedTab.label}
           </Tab>
         ))}
       </Tab.List>
