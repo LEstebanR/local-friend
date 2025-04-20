@@ -1,7 +1,7 @@
 type TextFieldType = {
   label: string
   placeholder: string
-  className: string
+  className?: string
 }
 
 export function TextAreaField({
