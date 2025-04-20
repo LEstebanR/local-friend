@@ -17,7 +17,7 @@ export const Footer = () => {
         <div className="flex gap-4">
           {LINKS.map((link) => {
             return (
-              <CustomLink href={link.href} type="text">
+              <CustomLink href={link.href} type="text" isMenu>
                 {link.label}
               </CustomLink>
             )
@@ -28,6 +28,7 @@ export const Footer = () => {
         <CustomLink
           href="https://github.com/LEstebanR/lesteban"
           aria-label="Github project"
+          isMenu
         >
           <Github className="h-6 w-6" />
         </CustomLink>
@@ -40,6 +41,7 @@ export const Footer = () => {
             href="https://github.com/LEstebanR/lesteban"
             blank
             type="text"
+            isMenu
           >
             LEstebanR
           </CustomLink>
