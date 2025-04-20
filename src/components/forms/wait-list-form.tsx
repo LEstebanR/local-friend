@@ -32,7 +32,7 @@ function GuideForm() {
   return (
     <form className="flex flex-col gap-4">
       <TextField label="Nombre completo" placeholder="Tu nombre" />
-      <TextField lable="Correo electrónico" placeholder="tu@email.com" />
+      <TextField label="Correo electrónico" placeholder="tu@email.com" />
       <TextField label="Tu ciudad" placeholder="Ciudad, país" />
       <TextAreaField
         label="¿Qué te gustaría mostrar de tu ciudad"
