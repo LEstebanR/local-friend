@@ -29,7 +29,7 @@ function ItemData({
   title,
   description,
 }: {
-  icon: ReeactNode
+  icon: ReactNode
   title: string
   description: string
 }) {
