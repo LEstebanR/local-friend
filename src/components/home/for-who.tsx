@@ -19,9 +19,9 @@ const LOCALS_DATA = [
 
 export function ForWho() {
   return (
-    <div className="my:8 grid w-full grid-cols-1 gap-8 px-4 md:mt-12 md:w-4/6 md:grid-cols-2">
+    <div className="my-8 grid w-full grid-cols-1 gap-8 px-4 md:mt-12 md:w-4/6 md:grid-cols-2">
       <div className="flex w-full flex-col gap-4">
-        <H3 className="text-center">Para Viajeros</H3>
+        <H3>Para Viajeros</H3>
         <div className="flex flex-col gap-2">
           {TRAVELERS_DATA.map((data) => {
             return (
@@ -36,7 +36,7 @@ export function ForWho() {
         </div>
       </div>
       <div className="w-full">
-        <H3 className="text-center">Para guias locales</H3>
+        <H3>Para guias locales</H3>
         <div className="flex flex-col gap-2">
           {LOCALS_DATA.map((data) => {
             return (

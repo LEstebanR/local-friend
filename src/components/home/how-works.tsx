@@ -45,7 +45,7 @@ function StepData({
 
 export function HowWorks() {
   return (
-    <div className="md:pv-12 flex w-5/6 w-full flex-col items-center bg-slate-50 px-4 py-8 text-center">
+    <div className="flex w-full flex-col items-center bg-slate-50 px-4 py-8 text-center md:py-12">
       <div className="flex flex-col gap-4 md:w-4/6 md:gap-12">
         <H2>Cómo funcionará</H2>
         <Body className="text-muted">

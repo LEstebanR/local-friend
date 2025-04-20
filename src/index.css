@@ -3,6 +3,7 @@
 @theme {
   --color-primary: oklch(70.4% 0.14 182.503);
   --color-primary-bg: oklch(95.3% 0.051 180.801);
+  --color-primary-bg-light: oklch(98.4% 0.014 180.72);
   --color-secondary: oklch(0% 0 0);
   --color-muted: oklch(70.7% 0.022 261.325);
 }
