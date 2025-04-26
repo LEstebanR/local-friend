@@ -48,33 +48,38 @@ function ItemData({
 
 export function JoinList() {
   return (
-    <div className="bg-primary-bg-light flex w-full justify-center">
-      <div className="my-8 grid w-full grid-cols-1 gap-8 px-4 md:mt-12 md:w-4/6 md:grid-cols-2">
-        <div className="flex flex-col gap-4">
-          <Chip color="primary-bg" className="text-primary">
-            <div className="items center flex gap-2 font-bold">
-              <Calendar className="text-primary" />
-              <Body>Lanzamiento previsto: Finales 2025</Body>
+    <section
+      id="waitlist"
+      className="flex w-full flex-col items-center gap-8 py-16"
+    >
+      <div className="bg-primary-bg-light flex w-full justify-center">
+        <div className="my-8 grid w-full grid-cols-1 gap-8 px-4 md:mt-12 md:w-4/6 md:grid-cols-2">
+          <div className="flex flex-col gap-4">
+            <Chip color="primary-bg" className="text-primary">
+              <div className="items center flex gap-2 font-bold">
+                <Calendar className="text-primary" />
+                <Body>Lanzamiento previsto: Finales 2025</Body>
+              </div>
+            </Chip>
+            <H2>Únete a nuestra Lista de Espera</H2>
+            <Body color="muted">
+              Estamos trabajando duro para lanzar LocalFriend pronto. Regístrate
+              ahora para ser de los primeros en acceder cuando la plataforma
+              esté lista y recibir ofertas exclusivas para early adopters.
+            </Body>
+            <div className="flex flex-col gap-2">
+              {ITEMS_INFO.map((data) => (
+                <ItemData
+                  icon={data.icon}
+                  title={data.title}
+                  description={data.description}
+                />
+              ))}
             </div>
-          </Chip>
-          <H2>Únete a nuestra Lista de Espera</H2>
-          <Body color="muted">
-            Estamos trabajando duro para lanzar LocalFriend pronto. Regístrate
-            ahora para ser de los primeros en acceder cuando la plataforma esté
-            lista y recibir ofertas exclusivas para early adopters.
-          </Body>
-          <div className="flex flex-col gap-2">
-            {ITEMS_INFO.map((data) => (
-              <ItemData
-                icon={data.icon}
-                title={data.title}
-                description={data.description}
-              />
-            ))}
           </div>
+          <WaitListForm />
         </div>
-        <WaitListForm />
       </div>
-    </div>
+    </section>
   )
 }
