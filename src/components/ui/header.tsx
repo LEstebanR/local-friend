@@ -22,7 +22,7 @@ const Header = () => {
         <Logo />
         <div className="hidden items-center gap-4 md:flex">
           {HEADER_LINKS.map((link: HeaderLink) => (
-            <CustomLink href={link.href} key={link.label} type="text">
+            <CustomLink href={link.href} key={link.label} type="text" isMenu>
               {link.label}
             </CustomLink>
           ))}

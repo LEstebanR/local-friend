@@ -9,7 +9,9 @@ type ChipProps = {
 
 export function Chip({ children, className, color = 'primary' }: ChipProps) {
   return (
-    <div className={clsx('rounded-full px-4 py-2', `bg-${color}`, className)}>
+    <div
+      className={clsx('w-max rounded-full px-4 py-2', `bg-${color}`, className)}
+    >
       {children}
     </div>
   )

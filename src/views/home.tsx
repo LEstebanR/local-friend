@@ -7,7 +7,7 @@ import { Qa } from '@components/home/qa'
 
 export function Home() {
   return (
-    <div className="flex w-full flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
       <Hero />
       <About />
       <HowWorks />

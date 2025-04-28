@@ -2,32 +2,17 @@ import { Github, Heart } from 'lucide-react'
 import { Logo } from '@components/ui/logo'
 import { CustomLink } from '@components/ui/link'
 
-const LINKS = [
-  {
-    label: 'Lista de espera',
-    href: '/#waitlist',
-  },
-]
-
 export const Footer = () => {
   return (
     <footer className="my-8 flex w-full flex-col items-center gap-8">
       <div className="flex flex-col items-center gap-4">
         <Logo />
-        <div className="flex gap-4">
-          {LINKS.map((link) => {
-            return (
-              <CustomLink href={link.href} type="text">
-                {link.label}
-              </CustomLink>
-            )
-          })}
-        </div>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-x-1 gap-y-3 sm:gap-x-2">
         <CustomLink
           href="https://github.com/LEstebanR/lesteban"
           aria-label="Github project"
+          isMenu
         >
           <Github className="h-6 w-6" />
         </CustomLink>
@@ -40,6 +25,7 @@ export const Footer = () => {
             href="https://github.com/LEstebanR/lesteban"
             blank
             type="text"
+            isMenu
           >
             LEstebanR
           </CustomLink>
