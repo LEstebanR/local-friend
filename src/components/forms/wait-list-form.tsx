@@ -7,7 +7,7 @@ import { Info } from '@components/ui/typography'
 import { CustomLink } from '@components/ui/link'
 import { useState } from 'react'
 import { supabase } from '@lib/supabase'
-
+import { toast } from 'sonner'
 function TravelerForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -26,10 +26,10 @@ function TravelerForm() {
         .insert([{ ...formData, type: 'traveler' }])
 
       if (error) throw error
-      alert('¡Gracias por unirte a la lista de espera!')
+      toast.success('¡Gracias por tu interés en ser viajero!')
     } catch (error) {
       console.error('Error:', error)
-      alert('Hubo un error al enviar el formulario')
+      toast.error('Hubo un error al enviar el formulario')
     } finally {
       setIsLoading(false)
     }
@@ -102,10 +102,10 @@ function GuideForm() {
         .insert([{ ...formData, type: 'guide' }])
 
       if (error) throw error
-      alert('¡Gracias por tu interés en ser guía!')
+      toast.success('¡Gracias por tu interés en ser guía!')
     } catch (error) {
       console.error('Error:', error)
-      alert('Hubo un error al enviar el formulario')
+      toast.error('Hubo un error al enviar el formulario')
     } finally {
       setIsLoading(false)
     }
