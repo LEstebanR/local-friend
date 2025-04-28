@@ -8,6 +8,12 @@ import { CustomLink } from '@components/ui/link'
 import { useState } from 'react'
 import { supabase } from '@lib/supabase'
 import { toast } from 'sonner'
+
+// Función de validación de email
+const isValidEmail = (email: string): boolean => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+}
+
 function TravelerForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -16,9 +22,17 @@ function TravelerForm() {
     interests: '',
   })
   const [isLoading, setIsLoading] = useState(false)
+  const [emailError, setEmailError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    // Validar email antes de enviar
+    if (!isValidEmail(formData.email)) {
+      setEmailError('Por favor ingresa un correo electrónico válido')
+      return
+    }
+
     setIsLoading(true)
     try {
       const { error } = await supabase
@@ -38,6 +52,19 @@ function TravelerForm() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
+
+    // Limpiar error de email cuando el usuario está escribiendo
+    if (name === 'email') {
+      setEmailError(null)
+    }
+  }
+
+  const validateEmail = () => {
+    if (formData.email && !isValidEmail(formData.email)) {
+      setEmailError('Por favor ingresa un correo electrónico válido')
+    } else {
+      setEmailError(null)
+    }
   }
 
   return (
@@ -59,6 +86,8 @@ function TravelerForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
+          onBlur={validateEmail}
+          error={emailError}
         />
         <TextField
           label="¿Dónde te gustaría viajar?"
@@ -92,9 +121,17 @@ function GuideForm() {
     interests: '',
   })
   const [isLoading, setIsLoading] = useState(false)
+  const [emailError, setEmailError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    // Validar email antes de enviar
+    if (!isValidEmail(formData.email)) {
+      setEmailError('Por favor ingresa un correo electrónico válido')
+      return
+    }
+
     setIsLoading(true)
     try {
       const { error } = await supabase
@@ -116,6 +153,19 @@ function GuideForm() {
   ) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
+
+    // Limpiar error de email cuando el usuario está escribiendo
+    if (name === 'email') {
+      setEmailError(null)
+    }
+  }
+
+  const validateEmail = () => {
+    if (formData.email && !isValidEmail(formData.email)) {
+      setEmailError('Por favor ingresa un correo electrónico válido')
+    } else {
+      setEmailError(null)
+    }
   }
 
   return (
@@ -137,6 +187,8 @@ function GuideForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
+          onBlur={validateEmail}
+          error={emailError}
         />
         <TextField
           label="Tu ciudad"
