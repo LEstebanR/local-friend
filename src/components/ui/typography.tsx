@@ -68,5 +68,5 @@ export const Emphasized = ({ children }: { children: React.ReactNode }) => {
 }
 
 export const Info = ({ children }: TypographyType) => {
-  return <p className="text-xs">{children}</p>
+  return <p className="text-xs leading-relaxed">{children}</p>
 }

@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+#Stack project
+* React
+* Typescript
+* Vite
+* TankStack Route
+* Tailwind
+* i18next

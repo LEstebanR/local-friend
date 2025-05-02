@@ -8,6 +8,7 @@ import { CustomLink } from '@components/ui/link'
 import { useState } from 'react'
 import { supabase } from '@lib/supabase'
 import { toast } from 'sonner'
+import { useTranslation } from 'react-i18next'
 
 // Función de validación de email
 const isValidEmail = (email: string): boolean => {
@@ -15,6 +16,7 @@ const isValidEmail = (email: string): boolean => {
 }
 
 function TravelerForm() {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -74,15 +76,15 @@ function TravelerForm() {
     >
       <div className="flex flex-col gap-4">
         <TextField
-          label="Nombre completo"
-          placeholder="Tu nombre"
+          label={t('home.complete-name')}
+          placeholder={t('home.your-name')}
           name="name"
           value={formData.name}
           onChange={handleChange}
         />
         <TextField
-          label="Correo electrónico"
-          placeholder="tu@email.com"
+          label={t('home.email')}
+          placeholder={t('home.email-placeholder')}
           name="email"
           value={formData.email}
           onChange={handleChange}
@@ -90,15 +92,15 @@ function TravelerForm() {
           error={emailError}
         />
         <TextField
-          label="¿Dónde te gustaría viajar?"
-          placeholder="Ciudad, país"
+          label={t('home.place-to-travel')}
+          placeholder={t('home.city-country')}
           name="location"
           value={formData.location}
           onChange={handleChange}
         />
         <TextField
-          label="Intereses"
-          placeholder="Gastronomía, Historia, Arte, Naturaleza..."
+          label={t('home.interest')}
+          placeholder={t('home.interest-placeholder')}
           name="interests"
           value={formData.interests}
           onChange={handleChange}
@@ -106,7 +108,7 @@ function TravelerForm() {
       </div>
       <Button type="submit" color="black" size="full" isLoading={isLoading}>
         <span className="flex items-center gap-2">
-          <p>Unirme a la lista de espera</p> <ArrowRight className="h-4" />
+          <p>{t('home.join-list')}</p> <ArrowRight className="h-4" />
         </span>
       </Button>
     </form>
@@ -114,6 +116,7 @@ function TravelerForm() {
 }
 
 function GuideForm() {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -175,15 +178,15 @@ function GuideForm() {
     >
       <div className="flex flex-col gap-4">
         <TextField
-          label="Nombre completo"
-          placeholder="Tu nombre"
+          label={t('home.complete-name')}
+          placeholder={t('home.your-name')}
           name="name"
           value={formData.name}
           onChange={handleChange}
         />
         <TextField
-          label="Correo electrónico"
-          placeholder="tu@email.com"
+          label={t('home.email')}
+          placeholder={t('home.email-placeholder')}
           name="email"
           value={formData.email}
           onChange={handleChange}
@@ -191,15 +194,15 @@ function GuideForm() {
           error={emailError}
         />
         <TextField
-          label="Tu ciudad"
-          placeholder="Ciudad, país"
+          label={t('home.where-are-you-from')}
+          placeholder={t('home.city-country')}
           name="location"
           value={formData.location}
           onChange={handleChange}
         />
         <TextAreaField
-          label="¿Qué te gustaría mostrar de tu ciudad"
-          placeholder="Cuéntanos sobre tus intereses y qué experiencias te gustaría ofrecer..."
+          label={t('home.place-to-show')}
+          placeholder={t('home.place-to-show-placeholder')}
           name="interests"
           value={formData.interests}
           onChange={handleChange}
@@ -207,7 +210,7 @@ function GuideForm() {
       </div>
       <Button type="submit" color="black" size="full" isLoading={isLoading}>
         <span className="flex items-center gap-2">
-          <p>Unirme como guía</p>
+          <p>{t('home.join-list')}</p>
           <ArrowRight className="h-4" />
         </span>
       </Button>
@@ -218,26 +221,26 @@ function GuideForm() {
 const TABS_OPTIONS = [
   {
     value: 'traveler',
-    label: 'Soy Viajero',
+    label: 'im-traveler',
     component: <TravelerForm />,
   },
   {
     value: 'guide',
-    label: 'Quiero ser guía',
+    label: 'i-want-to-be-a-guide',
     component: <GuideForm />,
   },
 ]
 
 export function WaitListForm() {
+  const { t } = useTranslation()
   return (
     <div className="flex w-full flex-col items-center justify-between gap-2 rounded-md border border-black bg-white p-8">
       <div className="min-h-[500px] w-full">
         <TabsGroup options={TABS_OPTIONS} />
       </div>
       <Info>
-        Al unirte, aceptas recibir correos electrónicos sobre LocalFriend.
-        Puedes darte de baja en cualquier momento. Consulta nuestra{' '}
-        <CustomLink href="#">Política de Privacidad.</CustomLink>
+        {t('home.form-validation')}{' '}
+        <CustomLink href="#">{t('home.privacy-policy')}</CustomLink>
       </Info>
     </div>
   )
