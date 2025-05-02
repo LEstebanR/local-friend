@@ -1,6 +1,7 @@
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 import { ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 
 type OptionType = {
   value: string
@@ -13,6 +14,7 @@ type TabsGroupProps = {
 }
 
 export function TabsGroup({ options }: TabsGroupProps) {
+  const { t } = useTranslation()
   return (
     <Tab.Group className="w-full">
       <Tab.List className="mb-4 flex rounded-md bg-gray-100 p-1">
@@ -28,7 +30,7 @@ export function TabsGroup({ options }: TabsGroupProps) {
               )
             }
           >
-            {option.label}
+            {t(`home.${option.label}`)}
           </Tab>
         ))}
       </Tab.List>

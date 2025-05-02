@@ -3,24 +3,22 @@ import { MessageSquare, Calendar, Star, Globe } from 'lucide-react'
 import { Body, H2, H3 } from '@components/ui/typography'
 import { ReactNode } from 'react'
 import { WaitListForm } from '@components/forms/wait-list-form'
-
+import { useTranslation } from 'react-i18next'
 const ITEMS_INFO = [
   {
     icon: <MessageSquare className="text-primary h-5 w-5" />,
-    title: 'Actualizaciones Exclusivas',
-    description:
-      'Recibe noticias sobre nuestro progreso y características antes que nadie',
+    title: 'join-list-item-1-title',
+    description: 'join-list-item-1-description',
   },
   {
     icon: <Star className="text-primary h-5 w-5" />,
-    title: 'Acceso Prioritario',
-    description: 'Sé de los primeros en probar la plataforma cuando esté lista',
+    title: 'join-list-item-2-title',
+    description: 'join-list-item-2-description',
   },
   {
     icon: <Globe className="text-primary h-5 w-5" />,
-    title: 'Ofertas Especiales',
-    description:
-      'Descuentos exclusivos en tus primeras experiencias con LocalFriend',
+    title: 'join-list-item-3-title',
+    description: 'join-list-item-3-description',
   },
 ]
 
@@ -33,20 +31,22 @@ function ItemData({
   title: string
   description: string
 }) {
+  const { t } = useTranslation()
   return (
     <div className="flex gap-2">
       <div className="bg-primary-bg flex h-12 w-12 items-center justify-center rounded-full">
         {icon}
       </div>
       <div className="flex flex-col">
-        <H3>{title}</H3>
-        <Body className="text-muted">{description}</Body>
+        <H3>{t(`home.${title}`)}</H3>
+        <Body className="text-muted">{t(`home.${description}`)}</Body>
       </div>
     </div>
   )
 }
 
 export function JoinList() {
+  const { t } = useTranslation()
   return (
     <section
       id="waitlist"
@@ -58,15 +58,11 @@ export function JoinList() {
             <Chip color="primary-bg" className="text-primary">
               <div className="items center flex gap-2 font-bold">
                 <Calendar className="text-primary" />
-                <Body>Lanzamiento previsto: Finales 2025</Body>
+                <Body>{t('home.launch-date')}</Body>
               </div>
             </Chip>
-            <H2>Únete a nuestra Lista de Espera</H2>
-            <Body color="muted">
-              Estamos trabajando duro para lanzar LocalFriend pronto. Regístrate
-              ahora para ser de los primeros en acceder cuando la plataforma
-              esté lista y recibir ofertas exclusivas para early adopters.
-            </Body>
+            <H2>{t('home.join-list')}</H2>
+            <Body color="muted">{t('home.join-list-description')}</Body>
             <div className="flex flex-col gap-2">
               {ITEMS_INFO.map((data) => (
                 <ItemData
