@@ -38,10 +38,14 @@ export const CustomLink = ({
         }
       }}
     >
-      <div className="flex flex-row items-center gap-1">
-        {withIcon && icon}
-        {children}
-      </div>
+      {withIcon ? (
+        <div className="flex flex-row items-center gap-1">
+          {icon}
+          {children}
+        </div>
+      ) : (
+        children
+      )}
     </Link>
   )
 }
