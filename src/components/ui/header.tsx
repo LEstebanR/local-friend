@@ -31,13 +31,15 @@ const Header = () => {
           ))}
           <LanguageSwitcher />
         </div>
-        <DropDown
-          className="md:hidden"
-          options={HEADER_LINKS}
-          type="icon"
-          icon={<Menu />}
-          action={() => {}}
-        />
+        <div className="flex items-center justify-center gap-1 md:hidden">
+          <LanguageSwitcher />
+          <DropDown
+            options={HEADER_LINKS}
+            type="icon"
+            icon={<Menu />}
+            action={() => {}}
+          />
+        </div>
       </div>
     </header>
   )
