@@ -23,7 +23,7 @@ const LOCALS_DATA = [
 export function ForWho() {
   const { t } = useTranslation()
   return (
-    <div className="my-8 grid w-full grid-cols-1 gap-8 px-4 md:mt-12 md:w-4/6 md:grid-cols-2">
+    <div className="my-8 grid w-full grid-cols-1 gap-8 px-4 md:mt-12 md:w-4/6 md:grid-cols-2 md:px-0">
       <div className="flex w-full flex-col gap-4">
         <H3>{t('home.for-travelers')}</H3>
         <div className="flex flex-col gap-2">

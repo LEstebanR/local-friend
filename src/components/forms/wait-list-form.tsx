@@ -9,7 +9,7 @@ import { useState } from 'react'
 import { supabase } from '@lib/supabase'
 import { toast } from 'sonner'
 import { useTranslation } from 'react-i18next'
-
+import clsx from 'clsx'
 // Función de validación de email
 const isValidEmail = (email: string): boolean => {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
@@ -231,10 +231,15 @@ const TABS_OPTIONS = [
   },
 ]
 
-export function WaitListForm() {
+export function WaitListForm({ className }: { className?: string }) {
   const { t } = useTranslation()
   return (
-    <div className="flex w-full flex-col items-center justify-between gap-2 rounded-md border border-black bg-white p-8">
+    <div
+      className={clsx(
+        'flex w-full max-w-md flex-col items-center justify-between gap-2 rounded-md border border-black bg-white p-8',
+        className
+      )}
+    >
       <div className="min-h-[500px] w-full">
         <TabsGroup options={TABS_OPTIONS} />
       </div>
