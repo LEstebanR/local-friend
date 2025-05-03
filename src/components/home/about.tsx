@@ -26,7 +26,7 @@ const CARDS_INFO = [
 export function About() {
   const { t } = useTranslation()
   return (
-    <div className="flex flex-col items-center gap-12 py-12 text-center md:w-4/6">
+    <div className="flex flex-col items-center gap-12 py-12 text-center md:w-4/6 md:px-0">
       <H2>{t('home.what-is-local-friend')}</H2>
       <Body className="px-8 text-center" color="muted">
         {t('home.localfriend-is')}

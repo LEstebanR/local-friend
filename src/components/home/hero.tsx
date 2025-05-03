@@ -10,7 +10,7 @@ export function Hero() {
   const { t } = useTranslation()
   return (
     <div
-      className="flex w-full flex-col items-center justify-between gap-4 overflow-hidden bg-cover bg-center px-2 py-4 md:min-h-[450px] md:gap-12 md:py-8"
+      className="flex w-full flex-col items-center justify-between gap-4 overflow-hidden bg-cover bg-center px-2 py-4 md:min-h-[450px] md:gap-12 md:px-0 md:py-8"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(13, 148, 136, 0.8), rgba(30, 64, 175, 0.7)), url(${imageUrl})`,
         backgroundSize: 'cover',

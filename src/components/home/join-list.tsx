@@ -53,12 +53,12 @@ export function JoinList() {
       className="flex w-full flex-col items-center gap-8 py-16"
     >
       <div className="bg-primary-bg-light flex w-full justify-center">
-        <div className="my-8 grid w-full grid-cols-1 gap-8 px-4 md:mt-12 md:w-4/6 md:grid-cols-2">
-          <div className="flex flex-col gap-4">
+        <div className="my-8 grid w-full grid-cols-1 gap-8 px-4 md:mt-12 md:w-4/6 md:grid-cols-2 md:gap-16 md:px-0">
+          <div className="flex flex-col gap-4 md:justify-self-start">
             <Chip color="primary-bg" className="text-primary">
               <div className="items center flex gap-2 font-bold">
                 <Calendar className="text-primary" />
-                <Body>{t('home.launch-date')}</Body>
+                <Body color="primary">{t('home.launch-date')}</Body>
               </div>
             </Chip>
             <H2>{t('home.join-list')}</H2>
@@ -73,7 +73,7 @@ export function JoinList() {
               ))}
             </div>
           </div>
-          <WaitListForm />
+          <WaitListForm className="md:justify-self-end" />
         </div>
       </div>
     </section>
