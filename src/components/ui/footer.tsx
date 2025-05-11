@@ -11,7 +11,7 @@ export const Footer = () => {
       </div>
       <div className="flex flex-wrap items-center justify-center gap-x-1 gap-y-3 sm:gap-x-2">
         <CustomLink
-          href="https://github.com/LEstebanR/lesteban"
+          href="https://github.com/LEstebanR/local-friend"
           aria-label="Github project"
           isMenu
         >
