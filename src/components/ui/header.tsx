@@ -1,21 +1,25 @@
-import { CustomLink } from '@components/ui/link'
 import { Logo } from '@components/ui/logo'
 import { DropDown } from '@components/ui/dropdown'
 import { Menu } from 'lucide-react'
 import { LanguageSwitcher } from '@components/ui/language-switcher'
 import { useTranslation } from 'react-i18next'
-
-const HEADER_LINKS = [
-  {
-    label: 'waitlist',
-    href: '/#waitlist',
-  },
-]
+import { Button } from '@components/ui/button'
 
 type HeaderLink = {
   label: string
   href: string
+  type: 'link' | 'icon' | 'submit'
+  color: 'primary' | 'secondary' | 'black'
 }
+
+const HEADER_LINKS: HeaderLink[] = [
+  {
+    label: 'sign-up',
+    href: '/sign-up',
+    type: 'link',
+    color: 'primary',
+  },
+]
 
 const Header = () => {
   const { t } = useTranslation()
@@ -25,9 +29,14 @@ const Header = () => {
         <Logo />
         <div className="hidden items-center gap-4 md:flex">
           {HEADER_LINKS.map((link: HeaderLink) => (
-            <CustomLink href={link.href} key={link.label} type="text" isMenu>
+            <Button
+              key={link.label}
+              href={link.href}
+              type={link.type}
+              color={link.color}
+            >
               {t(link.label)}
-            </CustomLink>
+            </Button>
           ))}
           <LanguageSwitcher />
         </div>
@@ -44,5 +53,4 @@ const Header = () => {
     </header>
   )
 }
-
 export default Header

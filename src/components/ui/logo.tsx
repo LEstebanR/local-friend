@@ -1,10 +1,14 @@
 import { Users } from 'lucide-react'
 import { CustomLink } from './link'
 import { H1 } from '@components/ui/typography'
+import { useNavigate } from '@tanstack/react-router'
 
 export function Logo() {
+  const navigate = useNavigate()
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
+    navigate({ to: '/' })
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
