@@ -31,7 +31,7 @@ function TravelerForm() {
 
     // Validar email antes de enviar
     if (!isValidEmail(formData.email)) {
-      setEmailError('Por favor ingresa un correo electrónico válido')
+      setEmailError(t('home.error-email'))
       return
     }
 
@@ -42,10 +42,10 @@ function TravelerForm() {
         .insert([{ ...formData, type: 'traveler' }])
 
       if (error) throw error
-      toast.success('¡Gracias por tu interés en ser viajero!')
+      toast.success(t('home.alert-success-traveler'))
     } catch (error) {
       console.error('Error:', error)
-      toast.error('Hubo un error al enviar el formulario')
+      toast.error(t('home.alert-error'))
     } finally {
       setIsLoading(false)
     }
@@ -63,7 +63,7 @@ function TravelerForm() {
 
   const validateEmail = () => {
     if (formData.email && !isValidEmail(formData.email)) {
-      setEmailError('Por favor ingresa un correo electrónico válido')
+      setEmailError(t('home.error-email'))
     } else {
       setEmailError(null)
     }
@@ -131,7 +131,7 @@ function GuideForm() {
 
     // Validar email antes de enviar
     if (!isValidEmail(formData.email)) {
-      setEmailError('Por favor ingresa un correo electrónico válido')
+      setEmailError(t('home.error-email'))
       return
     }
 
@@ -142,10 +142,10 @@ function GuideForm() {
         .insert([{ ...formData, type: 'guide' }])
 
       if (error) throw error
-      toast.success('¡Gracias por tu interés en ser guía!')
+      toast.success(t('home.alert-success-guide'))
     } catch (error) {
       console.error('Error:', error)
-      toast.error('Hubo un error al enviar el formulario')
+      toast.error(t('home.alert-error'))
     } finally {
       setIsLoading(false)
     }
@@ -165,7 +165,7 @@ function GuideForm() {
 
   const validateEmail = () => {
     if (formData.email && !isValidEmail(formData.email)) {
-      setEmailError('Por favor ingresa un correo electrónico válido')
+      setEmailError(t('home.error-email'))
     } else {
       setEmailError(null)
     }
